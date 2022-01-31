@@ -4,7 +4,7 @@ public class Field {
 
     //Initialisation of the field of play
     private String[][] field = {{"#", "#", "#", "#", "#", "#", "#", "#", "#", "#"},
-                                {"#", " ", " ", " ", " ", " ", " ", " ", " ", "#"},
+                                {"#", ">", " ", " ", " ", " ", " ", " ", " ", "#"},
                                 {"#", " ", " ", " ", " ", " ", " ", " ", " ", "#"},
                                 {"#", " ", " ", " ", " ", " ", " ", " ", " ", "#"},
                                 {"#", " ", " ", " ", " ", " ", " ", " ", " ", "#"},
@@ -22,5 +22,10 @@ public class Field {
             }
             System.out.println();
         }
+    }
+
+    //Executes movement commands in the field of play
+    public void move(String dir, int x, int y) {
+        field[y][x] = dir;
     }
 }
