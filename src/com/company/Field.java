@@ -36,15 +36,19 @@ public class Field {
     //Executes movement commands
     public void move() {
         if(dir.equals(">")) {
+            field[posY][posX] = " ";
             posX++;
             field[posY][posX] = dir;
         } else if(dir.equals("<")) {
+            field[posY][posX] = " ";
             posX--;
             field[posY][posX] = dir;
         } else if(dir.equals("v")) {
+            field[posY][posX] = " ";
             posY++;
             field[posY][posX] = dir;
         } else if(dir.equals("^")) {
+            field[posY][posX] = " ";
             posY--;
             field[posY][posX] = dir;
         }

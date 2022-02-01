@@ -33,7 +33,6 @@ public class Main {
                 System.out.println();
             } else if(input.equals("x")) {
                 System.out.println("Exiting program...");
-                System.out.println();
             } else {
                 System.out.println("ERROR: Invalid input!");
                 System.out.println();
