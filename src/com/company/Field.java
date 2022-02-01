@@ -3,6 +3,9 @@ package com.company;
 public class Field {
 
     //Initialisation of the field of play
+    private String dir = ">";
+    private int posX = 1;
+    private int posY = 1;
     private String[][] field = {{"#", "#", "#", "#", "#", "#", "#", "#", "#", "#"},
                                 {"#", ">", " ", " ", " ", " ", " ", " ", " ", "#"},
                                 {"#", " ", " ", " ", " ", " ", " ", " ", " ", "#"},
@@ -24,8 +27,26 @@ public class Field {
         }
     }
 
-    //Executes movement commands in the field of play
-    public void move(String dir, int x, int y) {
-        field[y][x] = dir;
+    //Executes directional commands
+    public void setDir(String dir) {
+        this.dir = dir;
+        field[posY][posX] = this.dir;
+    }
+
+    //Executes movement commands
+    public void move() {
+        if(dir.equals(">")) {
+            posX++;
+            field[posY][posX] = dir;
+        } else if(dir.equals("<")) {
+            posX--;
+            field[posY][posX] = dir;
+        } else if(dir.equals("v")) {
+            posY++;
+            field[posY][posX] = dir;
+        } else if(dir.equals("^")) {
+            posY--;
+            field[posY][posX] = dir;
+        }
     }
 }

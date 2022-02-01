@@ -3,21 +3,6 @@ package com.company;
 public class Player {
 
     private String dir = ">";
-    private int xPos = 1;
-    private int yPos = 1;
-
-    //Player forward command
-    public void fwd(){
-        if(dir.equals(">")) {
-            xPos++;
-        } else if(dir.equals("<")) {
-            xPos--;
-        } else if(dir.equals("v")) {
-            yPos++;
-        } else if(dir.equals("^")) {
-            yPos--;
-        }
-    }
 
     //Player directional controls
     public void left() {
@@ -44,16 +29,8 @@ public class Player {
         }
     }
 
-    //Getters for the player's direction and position in the field
+    //Getter for the player's direction
     public String getDir() {
         return dir;
-    }
-
-    public int getxPos() {
-        return xPos;
-    }
-
-    public int getyPos() {
-        return yPos;
     }
 }
