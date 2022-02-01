@@ -33,24 +33,35 @@ public class Field {
         field[posY][posX] = this.dir;
     }
 
-    //Executes movement commands
+    //Executes movement commands with collision check
     public void move() {
-        if(dir.equals(">")) {
+        if((dir.equals(">")) && (field[posY][posX + 1].equals(" "))) {
             field[posY][posX] = " ";
             posX++;
             field[posY][posX] = dir;
-        } else if(dir.equals("<")) {
+            System.out.println("You move forward...");
+            System.out.println();
+        } else if((dir.equals("<")) && (field[posY][posX - 1].equals(" "))) {
             field[posY][posX] = " ";
             posX--;
             field[posY][posX] = dir;
-        } else if(dir.equals("v")) {
+            System.out.println("You move forward...");
+            System.out.println();
+        } else if((dir.equals("v")) && (field[posY + 1][posX].equals(" "))) {
             field[posY][posX] = " ";
             posY++;
             field[posY][posX] = dir;
-        } else if(dir.equals("^")) {
+            System.out.println("You move forward...");
+            System.out.println();
+        } else if((dir.equals("^")) && (field[posY - 1][posX].equals(" "))) {
             field[posY][posX] = " ";
             posY--;
             field[posY][posX] = dir;
+            System.out.println("You move forward...");
+            System.out.println();
+        } else {
+            System.out.println("There is something blocking your path...");
+            System.out.println();
         }
     }
 }

@@ -17,8 +17,6 @@ public class Main {
             input = sc.next();
             if(input.equals("w")) {
                 playField.move();
-                System.out.println("You move forward...");
-                System.out.println();
             } else if(input.equals("a")) {
                 player1.left();
                 dir = player1.getDir();
